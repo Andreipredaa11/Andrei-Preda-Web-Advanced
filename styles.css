@@ -1,0 +1,92 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #007700;
+    background-image: url('https://img.freepik.com/premium-vector/poker-table-background-green-color_313905-304.jpg');
+    margin: 0;
+}
+
+.game-container {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 900px;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.hand {
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+    min-width: 150px;
+    display: flex;
+    gap: 10px;
+}
+
+.card-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }  
+
+.card {
+    width: 70px;
+    height: 90px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+    position: relative;
+    transform: rotate(0deg);
+    animation: draw 0.5s ease-in-out;
+    margin: 10px;
+    /* Add margin for spacing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Add shadow for depth */
+}
+
+@keyframes draw {
+    from {
+        transform: scale(0.5) rotate(-360deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+#message {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007700;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005500;
+}
